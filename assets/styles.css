@@ -12,7 +12,7 @@ a{color:var(--color-5);text-decoration:none;}
 
 .day{background:var(--color-2);display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;width:17%;margin:0.4%;padding:0.4em 0;cursor:pointer;font-size:0.9em;border-radius:10px;}
 .day_n{font-size:21px;display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;padding:0.2em 0 0.4em 0;font-weight:bold;}
-.day_n1{font-size:21px;display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;padding:0.2em 0 0.4em 0;color:var(--color-5);;width:100%;}
+.day_n1{font-size:21px;display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;padding:0.2em 0 0.4em 0;color:var(--color-2);width:100%;}
 .hours{background:var(--color-2);display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;width:10.2%;margin:0.4%;padding:0.4em 0;font-size:0.9em;border-radius:10px;}
 .hours2, .hours3, .hours4, .hours5{display:none;}
 .box{width:92%;height:30px;margin:0.1em;outline:none;display:flex;flex-flow:row;align-items:center;justify-content:center;}
