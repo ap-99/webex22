@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Πρόγραμμα</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+ </head>
+ <body> 
+  
+  <div id="theme_sel">
+   <div id="blue_th" class="theme_item active_theme" onclick="changeCSS('assets/styles.css', 0);"></div>
+   <div id="black_th" class="theme_item" onclick="changeCSS('assets/styles_bl.css', 0);"></div>
+   <div id="white_th" class="theme_item" onclick="changeCSS('assets/styles_wh.css', 0);"></div>
+  </div>
+  
+  <div id="save"><img class="save_img" src="assets/ico_save.png"></div>
+  <div id="schedule">
+   <div id="title">Πρόγραμμα</div>
+   <div class="hours hours1">
+    <div class="day_n1">-</div>
+	<div class="time">08:30-09:10</div>
+    <div class="time">09:20-10:00</div>
+    <div class="time">10:10-10:50</div>
+    <div class="time">11:00-11:40</div>
+    <div class="time">11:50-12:30</div>
+    <div class="time">12:40-13:20</div>
+    <div class="time">13:30-14:10</div>
+   </div>
+   <div class="day">
+    <div class="day_n">Δευτέρα</div>
+	<div class="box" id="active_lesson"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+   </div>
+   <div class="hours hours2">
+    <div class="day_n1">-</div>
+	<div class="time">08:30-09:10</div>
+    <div class="time">09:20-10:00</div>
+    <div class="time">10:10-10:50</div>
+    <div class="time">11:00-11:40</div>
+    <div class="time">11:50-12:30</div>
+    <div class="time">12:40-13:20</div>
+    <div class="time">13:30-14:10</div>
+   </div>
+   <div class="day">
+    <div class="day_n">Τρίτη</div>
+	<div class="box"></div>
+    <div class="box"></div>
+	<div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+   </div>
+   <div class="hours hours3">
+    <div class="day_n1">-</div>
+	<div class="time">08:30-09:10</div>
+    <div class="time">09:20-10:00</div>
+    <div class="time">10:10-10:50</div>
+    <div class="time">11:00-11:40</div>
+    <div class="time">11:50-12:30</div>
+    <div class="time">12:40-13:20</div>
+    <div class="time">13:30-14:10</div>
+   </div>
+   <div class="day">
+    <div class="day_n">Τετάρτη</div>
+	<div class="box"></div>
+    <div class="box"></div>
+	<div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+   </div>
+   <div class="hours hours4">
+    <div class="day_n1">-</div>
+	<div class="time">08:30-09:10</div>
+    <div class="time">09:20-10:00</div>
+    <div class="time">10:10-10:50</div>
+    <div class="time">11:00-11:40</div>
+    <div class="time">11:50-12:30</div>
+    <div class="time">12:40-13:20</div>
+    <div class="time">13:30-14:10</div>
+   </div>
+   <div class="day">
+    <div class="day_n">Πέμπτη</div>
+	<div class="box"></div>
+    <div class="box"></div>
+	<div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+   </div>
+   <div class="hours hours5">
+    <div class="day_n1">-</div>
+	<div class="time">08:30-09:10</div>
+    <div class="time">09:20-10:00</div>
+    <div class="time">10:10-10:50</div>
+    <div class="time">11:00-11:40</div>
+    <div class="time">11:50-12:30</div>
+    <div class="time">12:40-13:20</div>
+    <div class="time">13:30-14:10</div>
+   </div>
+   <div class="day">
+    <div class="day_n">Παρασκευή</div>
+	<div class="box"></div>
+    <div class="box"></div>
+	<div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+   </div>
+   <div class="separator"></div>
+  </div>
+
+  <div id="tasks">
+   <div id="save2"><img class="save_img" src="assets/ico_save.png"></div>
+   <div id="title">Μαθήματα</div>
+   <div id="less_tasks">
+    <div class="less_task"><div class="less_name">Αγγλικά</div><textarea class="less_cont" id="cont1"></textarea></div>
+    <div class="less_task"><div class="less_name">Αρχαία</div><textarea class="less_cont" id="cont2"></textarea></div>
+    <div class="less_task"><div class="less_name">Βιολογία</div><textarea class="less_cont" id="cont3"></textarea></div>
+    <div class="less_task"><div class="less_name">Γαλλικά</div><textarea class="less_cont" id="cont4"></textarea></div>
+    <div class="less_task"><div class="less_name">Γεωγραφία</div><textarea class="less_cont" id="cont5"></textarea></div>
+    <div class="less_task"><div class="less_name">Γλώσσα</div><textarea class="less_cont" id="cont6"></textarea></div>
+    <div class="less_task"><div class="less_name">Γυμναστική</div><textarea class="less_cont" id="cont7"></textarea></div>
+    <div class="less_task"><div class="less_name">Εικαστικά</div><textarea class="less_cont" id="cont8"></textarea></div>
+    <div class="less_task"><div class="less_name">Θρησκευτικά</div><textarea class="less_cont" id="cont9"></textarea></div>
+    <div class="less_task"><div class="less_name">Ιστορία</div><textarea class="less_cont" id="cont10"></textarea></div>
+    <div class="less_task"><div class="less_name">Λογοτεχνία</div><textarea class="less_cont" id="cont11"></textarea></div>
+    <div class="less_task"><div class="less_name">Μαθηματικά</div><textarea class="less_cont" id="cont12"></textarea></div>
+    <div class="less_task"><div class="less_name">Μουσική</div><textarea class="less_cont" id="cont13"></textarea></div>
+    <div class="less_task"><div class="less_name">Οδύσσεια</div><textarea class="less_cont" id="cont14"></textarea></div>
+    <div class="less_task"><div class="less_name">Πληροφορική</div><textarea class="less_cont" id="cont15"></textarea></div>
+    <div class="less_task"><div class="less_name">Τεχνολογία</div><textarea class="less_cont" id="cont16"></textarea></div>
+    <div class="less_task"><div class="less_name">Φυσική</div><textarea class="less_cont" id="cont17"></textarea></div>
+	<div class="less_task"><div class="less_name">Χημεία</div><textarea class="less_cont" id="cont18"></textarea></div>
+   </div>
+   <div class="separator"></div>
+  </div>
+  
+  <div id="mails">
+   <div id="save3"><img class="save_img" src="assets/ico_save.png"></div>
+   <div id="title">E-Mails</div>
+   <div id="mail_boxes">
+    <div class="mail_box"><div class="mail_name">Σχολείο</div><textarea class="mail_cont" id="mail1"></textarea><a class="mail_link" id="mail1_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>	
+	<div class="mail_box"><div class="mail_name">Αποστολάτου</div><textarea class="mail_cont" id="mail2"></textarea><a class="mail_link" id="mail2_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Κατσίκη</div><textarea class="mail_cont" id="mail3"></textarea><a class="mail_link" id="mail3_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Καραγεώργη</div><textarea class="mail_cont" id="mail4"></textarea><a class="mail_link" id="mail4_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Χαραλαμπόπουλος</div><textarea class="mail_cont" id="mail5"></textarea><a class="mail_link" id="mail5_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Κεφαλή</div><textarea class="mail_cont" id="mail6"></textarea><a class="mail_link" id="mail6_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Λουβερδή</div><textarea class="mail_cont" id="mail7"></textarea><a class="mail_link" id="mail7_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Παπαγεωργίου</div><textarea class="mail_cont" id="mail8"></textarea><a class="mail_link" id="mail8_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Μάλλιου</div><textarea class="mail_cont" id="mail9"></textarea><a class="mail_link" id="mail9_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+	<div class="mail_box"><div class="mail_name">Σκόρδου</div><textarea class="mail_cont" id="mail10"></textarea><a class="mail_link" id="mail10_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+    <div class="mail_box"><div class="mail_name">Σαχπελίδου</div><textarea class="mail_cont" id="mail11"></textarea><a class="mail_link" id="mail11_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+    <div class="mail_box"><div class="mail_name">Φούντου</div><textarea class="mail_cont" id="mail12"></textarea><a class="mail_link" id="mail12_link" href=""><img class="icon" src="assets/ico_send.png"></a></div>
+   </div>
+  </div>
+  
+  <div id="lessons_box">
+   <div class="lesson_box" id="active"><a href="https://minedu-secondary.webex.com/meet/askordou" target="_blank">Αγγλικά</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/csachpel" target="_blank">Αρχαία</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/okefali" target="_blank">Βιολογία</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/alouver" target="_blank">Γαλλικά</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/okefali" target="_blank">Γεωγραφία</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/csachpel" target="_blank">Γλώσσα</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary2.webex.com/meet/sofkatsiki" target="_blank">Γυμναστική</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/join/evapost" target="_blank">Εικαστικά</a></div>
+   <div class="lesson_box"><a href="#" target="_blank">Θρησκευτικά</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/lpapage" target="_blank">Ιστορία</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/csachpel" target="_blank">Λογοτεχνία</a></div>  
+   <div class="lesson_box"><a href="https://minedu-secondary2.webex.com/meet/icharal" target="_blank">Μαθηματικά</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/soffountou" target="_blank">Μουσική</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/lpapage" target="_blank">Ιλιάδα</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/atkarage" target="_blank">Πληροφορική</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary2.webex.com/meet/olmalliou" target="_blank">Τεχνολογία</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/okefali" target="_blank">Φυσική</a></div>
+   <div class="lesson_box"><a href="https://minedu-secondary.webex.com/meet/okefali" target="_blank">Χημεία</a></div>
+   <div id="close_list"><img class="save_img" src="assets/ico_remove.png"></div>
+  </div>
+  
+  <script src="assets/script.js"></script>
+  
+ </body>
+</html>

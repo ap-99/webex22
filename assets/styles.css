@@ -1,0 +1,113 @@
+:root{--color-1:#19293D;--color-2:#131F2F;--color-3:#1F3450;--color-4:#253C5A;--color-5:#FFFFFF;--filter:0%;}
+/*:root{--color-1:#202020;--color-2:#101010;--color-3:#303030;--color-4:#404040;--color-5:#FFFFFF;--filter:0%;}*/
+/*:root{--color-1:#FFFFFF;--color-2:#D5D5D5;--color-3:#E5E5E5;--color-4:#F5F5F5;--color-5:#000000;--filter:100%;}*/
+@font-face{font-family:Manrope;src:url("font.ttf");}
+*{margin:0;padding:0;box-sizing:border-box;transition:background-color 0.4s ease-out;}
+body{display:flex;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:center;background:var(--color-1);color:var(--color-5);font-family:Manrope;position:relative;white-space:nowrap}
+a{color:var(--color-5);text-decoration:none;}
+
+#schedule{width:97%;display:flex;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:flex-start;margin-top:2em;padding:1em 0.6em;}
+#tasks, #mails{width:97%;display:flex;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:flex-start;margin-top:1em;padding:1em 0.6em;position:relative;}
+#mails{margin-bottom:1.2em;}
+
+.day{background:var(--color-2);display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;width:17%;margin:0.4%;padding:0.4em 0;cursor:pointer;font-size:0.9em;border-radius:10px;}
+.day_n{font-size:21px;display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;padding:0.2em 0 0.4em 0;font-weight:bold;}
+.day_n1{font-size:21px;display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;padding:0.2em 0 0.4em 0;color:var(--color-5);;width:100%;}
+.hours{background:var(--color-2);display:flex;flex-flow:column;flex-flow:wrap;align-items:center;justify-content:center;width:10.2%;margin:0.4%;padding:0.4em 0;font-size:0.9em;border-radius:10px;}
+.hours2, .hours3, .hours4, .hours5{display:none;}
+.box{width:92%;height:30px;margin:0.1em;outline:none;display:flex;flex-flow:row;align-items:center;justify-content:center;}
+.time{background:var(--color-3);width:88%;height:30px;margin:0.1em;outline:none;display:flex;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:center;}
+.edit_lesson{width:20%;height:100%;display:flex;flex-flow:row;align-items:center;justify-content:center;cursor:pointer;margin-left:1%;}
+.remove_lesson{width:50%;height:100%;display:flex;flex-flow:row;align-items:center;justify-content:center;cursor:pointer;margin-left:1%;}
+.change_lesson{width:50%;height:100%;display:flex;flex-flow:row;align-items:center;justify-content:center;cursor:pointer;}
+.lesson{background:var(--color-3);width:78%;height:100%;display:flex;flex-flow:row;align-items:center;justify-content:center;margin-right:2%;}
+.lesson a:hover{color:#C4B634;}
+
+#lessons_box{width:90%;background:var(--color-2);position:fixed;top:17%;margin:0 auto;padding:0.5em;display:none;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:flex-start;}
+.lesson_box{width:24.5%;background:var(--color-3);display:inline-block;margin:0.25%;text-align:center;padding:0.6em 0.2em;cursor:pointer;font-size:0.9em;}
+.lesson_box:hover{background:var(--color-4);}
+.lesson_box a{pointer-events:none;}
+
+#title{width:100%;display:flex;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:center;font-size:40px;margin-bottom:0.8em;font-weight:bold;}  
+#save{position:absolute;top:50px;right:50px;cursor:pointer;display:block;padding:0.8em;border-radius:50%;display:flex;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:center;}
+#save2, #save3{position:absolute;top:20px;right:50px;cursor:pointer;display:block;padding:0.8em;border-radius:50%;display:flex;flex-flow:row;flex-flow:wrap;align-items:center;justify-content:center;}
+#close_list{position:fixed;top:25px;right:30px;font-size:30px;cursor:pointer;}
+.save_img{width:25px;margin:0 !important;filter:invert(var(--filter));}
+.icon{width:14px;filter:invert(var(--filter));} 
+
+#less_tasks, #mail_boxes{display:flex;flex-flow:wrap;align-items:center;justify-content:flex-start;width:100%;}
+.less_task, .mail_box{width:24%;display:flex;flex-flow:wrap;align-items:center;justify-content:center;margin:0.5%;background:var(--color-2);padding:2px;border-radius:10px;}
+.less_name, .mail_name{width:100%;margin:1.5% 0;overflow:hidden;text-align:center;font-weight:bold;}
+.less_cont, .mail_cont{width:96%;margin:2%;margin-top:0.5%;resize:none;font-family:Manrope;color:var(--color-5);border:none;outline:none;padding:5px;background:var(--color-3);height:10em;font-size:0.9em;}
+.mail_cont{width:87%;height:30px;margin:2%;margin-right:1%;margin-top:0.5%;}
+.mail_link{width:10%;height:30px;pointer-events:none;display:flex;flex-flow:row;align-items:center;justify-content:center;cursor:pointer;}
+
+.separator{background:var(--color-3);height:0.1em;width:95%;margin:0 auto;margin-top:4em;}
+#theme_sel{background:var(--color-3);position:absolute;top:65px;left:50px;display:flex;padding:0.4em;border-radius:5%;}
+#blue_th{width:15px;height:15px;border-radius:50%;background:#19293D;margin:0 0.1em;cursor:pointer;}
+#black_th{width:15px;height:15px;border-radius:50%;background:#202020;margin:0 0.1em;cursor:pointer;}
+#white_th{width:15px;height:15px;border-radius:50%;background:#FFFFFF;margin:0 0.1em;cursor:pointer;}
+
+
+@media only screen and (max-width:1300px){
+.hours5{display:flex;}
+.day{width:20.5%;}
+.hours{width:14%;}
+}
+
+@media only screen and (max-width:1100px){
+.hours5{display:none;}
+.hours4{display:flex;}
+.day{width:26.5%;}
+.hours{width:17%;}
+.less_task, .mail_box{width:32.2%;}
+}
+
+@media only screen and (max-width:900px){
+.hours4{display:none;}
+.hours3, .hours5{display:flex;}
+.day{width:38.8%;}
+.hours{width:20%;}
+}
+
+@media only screen and (max-width:850px){
+.less_task, .mail_box{width:49%;}
+}
+
+@media only screen and (max-width:650px){
+.hours2, .hours4{display:flex;}
+.day{width:68%;}
+.hours{width:30%;}
+#schedule{width:90%;}
+}
+
+@media only screen and (max-width:550px){
+#save{top:50px;right:15px;}
+#save2{top:20px;right:15px;}
+#save3{top:20px;right:15px;}
+#theme_sel{left:30px;}
+#blue_th, #black_th, #white_th{width:12px;height:12px;}
+}
+
+@media only screen and (max-width:500px){
+#schedule{width:95%;}
+#save{top:40px;right:20px;}
+#save2{top:15px;right:20px;}
+#save3{top:15px;right:20px;}
+.save_img{width:22px;margin:0 !important;}
+.day_n, .day_n1{font-size:20px;}
+#title{font-size:30px;}
+body{font-size:0.85em;}
+.less_task, .mail_box{width:99.2%;}
+#theme_sel{top:55px;left:20px;}
+#blue_th, #black_th, #white_th{width:10px;height:10px;}
+}
+
+@media only screen and (max-width:400px){
+body{font-size:0.8em;}
+#save{top:35px;right:15px;}
+#save2{top:10px;right:15px;}
+#save3{top:10px;right:15px;}
+#title{font-size:25px;}
+#theme_sel{top:47px;left:20px;}
+}
